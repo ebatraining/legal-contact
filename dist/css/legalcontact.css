@@ -6,6 +6,8 @@
     .m-flowStepCaution, .m-greetingPosition, .m-contactTelTitle {
       font-size: 12px; } }
 
+ 　
+
 body, .m-businessDesc, .m-flowStepDesc, .m-greetingDesc, .m-summaryList, .m-contactTelTime, .m-contactMailBlockS, .m-contactAccess, #m-footer {
   font-size: 18px; }
   @media screen and (max-width: 543px) {
@@ -349,6 +351,12 @@ ul, li {
 dl, dt, dd {
   margin: 0;
   padding: 0; }
+
+  @media screen and (max-width: 767px) {
+    .m-philosophyDesc {
+      text-align: left;
+    }
+  }
 
 img {
   display: block; }
@@ -6815,7 +6823,7 @@ body {
   left: 0;
   top: 0;
   width: 100%;
-  background-color: rgba(255, 255, 255, 0.6);
+  background-color: rgba(255, 255, 255, 0.9);
   z-index: 9999; }
   @media screen and (max-width: 543px) {
     #m-header {
@@ -7214,7 +7222,9 @@ body {
   .m-aboutSecondaryText p {
     color: #333;
     margin: 1em 0 0 0;
-    line-height: 40.8px; }
+    line-height: 40.8px;
+    text-align: left;
+  }
     @media screen and (max-width: 543px) {
       .m-aboutSecondaryText p {
         line-height: 30.6px; } }
@@ -7858,6 +7868,10 @@ body {
   vertical-align: middle;
   width: auto; }
 
+.m-contactTelBlock {
+  width: 100%;
+}
+
 .m-contactTel, .m-contactFax {
   background-image: url(../../img/icon_contact_splite.png);
   background-repeat: no-repeat;
@@ -7866,16 +7880,111 @@ body {
   line-height: 1;
   font-weight: bold;
   padding-left: 35px; }
+
   @media screen and (max-width: 543px) {
     .m-contactTel, .m-contactFax {
-      background-size: 17px auto; } }
+      background-size: 17px auto;
+    }
+    }
+
   @media screen and (max-width: 543px) {
     .m-contactTel, .m-contactFax {
-      padding-left: 20px; } }
+      padding-left: 20px;
+    }
+    }
+
+
+  @media(min-width: 768px){
+      .btn-tel{
+        display: none;
+      }
+      .btn-tel2{
+        display: none;
+      }
+      a[href^="tel:"]{
+        pointer-events: none;
+      }
+}
+
+
+    @media(max-width: 767px){
+
+      .m-contactTel{
+            display: none;
+          }
+          .btn-tel{
+            position: relative;
+            display: block;
+            color: #fff;
+            text-align: center;
+            background: #ff9822;
+            margin: auto;
+            width: 100%;
+            line-height: 40px;
+            max-width: 270px;
+          }
+
+          .btn-tel::after{
+                background: url(../../img/telephone.png) no-repeat center;
+                width: 40px;
+                height: 40px;
+                content: "";
+                display: block;
+                position: absolute;
+                left: 0;
+                top: 0;
+                background-color: #ff6622;
+                background-size: 20px auto;
+                background-position: center;
+          }
+          .btn-tel2{
+            position: relative;
+            display: block;
+            color: #fff;
+            text-align: center;
+            background: #ff9822;
+            margin: auto;
+            width: 100%;
+            line-height: 60px;
+            font-size: 24px;
+          }
+
+          .btn-tel2::after{
+                background: url(../../img/telephone.png) no-repeat center;
+                width: 60px;
+                height: 60px;
+                content: "";
+                display: block;
+                position: absolute;
+                left: 0;
+                top: 0;
+                background-color: #ff6622;
+                background-size: 26px auto;
+                background-position: center;
+          }
+        .m-contactTelBlockS{
+          width: 100%;
+        }
+    }
+
+@media screen and (max-width: 543px){
+  .btn-tel2{
+    font-size: 18px;
+    line-height: 40px;
+  }
+  .btn-tel2::after{
+    width: 40px;
+    height: 40px;
+    background-size: 20px auto;
+  }
+}
+
+
   .m-contactTel span, .m-contactFax span {
     font-weight: 300;
     padding-left: 3px;
-    padding-right: 3px; }
+    padding-right: 3px;
+  }
 
 .m-contactTelTitle {
   line-height: 1;
@@ -7910,6 +8019,48 @@ body {
     .m-contactTel {
       background-position: 0 6px; } }
 
+      @media(min-width: 768px){
+          .btntel{
+            display: none;
+          }
+          a[href^="tel:"]{
+            pointer-events: none;
+          }
+      }
+
+      @media(max-width: 767px){
+
+        .m-contactTel{
+              display: none;
+            }
+            .btntel{
+              position: relative;
+              display: block;
+              color: #fff;
+              text-align: center;
+              background: #ff9822;
+              margin: auto;
+              width: 170%;
+              line-height: 40px;
+              max-width: 270px;
+            }
+
+}
+
+.btntel::after{
+      background: url(../../img/telephone.png) no-repeat center;
+      width: 40px;
+      height: 40px;
+      content: "";
+      display: block;
+      position: absolute;
+      left: 0;
+      top: 0;
+      background-color: #ff6622;
+      background-size: 20px auto;
+      background-position: center;
+}
+
 .m-contactTelTime {
   text-align: left;
   padding-left: 35px;
@@ -7937,7 +8088,10 @@ body {
   margin-top: 30px; }
   @media screen and (max-width: 543px) {
     .m-contactFaxBlock {
-      margin-top: 10px; } }
+      margin-top: 10px;
+      width: 100%;
+      }
+    }
 
 .m-contactFax {
   background-position: 0 -90px; }
@@ -8049,7 +8203,7 @@ body {
         width: 40px; } }
     @media screen and (max-width: 543px) {
       .m-contactMailBlockS:before {
-        height: 40px; } }
+        height: 40px;w } }
     @media screen and (max-width: 543px) {
       .m-contactMailBlockS:before {
         background-size: 20px auto; } }
